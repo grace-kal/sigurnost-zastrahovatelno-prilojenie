@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32929.386
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sigurnost-WebApp", "Sigurnost-WebApp\Sigurnost-WebApp.csproj", "{C987EE4D-771E-46E8-8801-ECD228F8C6A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sigurnost-WebApp", "Sigurnost-WebApp\Sigurnost-WebApp.csproj", "{C987EE4D-771E-46E8-8801-ECD228F8C6A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sigurnost-Models", "Sigurnost-Models\Sigurnost-Models.csproj", "{34B0A4EA-4D8A-4FB6-A8DD-28531830E6A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sigurnost-Models", "Sigurnost-Models\Sigurnost-Models.csproj", "{34B0A4EA-4D8A-4FB6-A8DD-28531830E6A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sigurnost-DataAccess", "Sigurnost-DataAccess\Sigurnost-DataAccess.csproj", "{BE719381-78AA-47BA-9BAA-B4416677E761}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sigurnost-DataAccess", "Sigurnost-DataAccess\Sigurnost-DataAccess.csproj", "{BE719381-78AA-47BA-9BAA-B4416677E761}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sigurnost-Services", "Sigurnost-Services\Sigurnost-Services.csproj", "{775A07B3-D815-4BA3-946A-B7E5F5EFC1B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sigurnost-Services", "Sigurnost-Services\Sigurnost-Services.csproj", "{775A07B3-D815-4BA3-946A-B7E5F5EFC1B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sigurnost-Api", "Sigurnost-Api\Sigurnost-Api.csproj", "{31589381-9CA2-430B-91C0-891E4C3CA726}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{775A07B3-D815-4BA3-946A-B7E5F5EFC1B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{775A07B3-D815-4BA3-946A-B7E5F5EFC1B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{775A07B3-D815-4BA3-946A-B7E5F5EFC1B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31589381-9CA2-430B-91C0-891E4C3CA726}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31589381-9CA2-430B-91C0-891E4C3CA726}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31589381-9CA2-430B-91C0-891E4C3CA726}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31589381-9CA2-430B-91C0-891E4C3CA726}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
