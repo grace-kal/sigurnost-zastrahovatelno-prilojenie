@@ -24,12 +24,12 @@ namespace Sigurnost_DataAccess
             builder.Entity<InsuranceContract>()
                 .HasOne(e => e.Agent)
                 .WithMany(a => a.SoldInsuranceContracts)
-                .HasForeignKey(e => e.AgentId);
+                .HasForeignKey(e => e.AgentId).OnDelete(DeleteBehavior.Restrict);
 
             builder.Entity<InsuranceContract>()
                 .HasOne(e => e.Client)
                 .WithMany(a => a.BoughtInsuranceContracts)
-                .HasForeignKey(e => e.ClientId);
+                .HasForeignKey(e => e.ClientId).OnDelete(DeleteBehavior.Restrict);
 
             base.OnModelCreating(builder);
         }
