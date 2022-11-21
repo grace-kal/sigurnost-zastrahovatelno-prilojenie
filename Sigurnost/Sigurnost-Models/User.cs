@@ -28,6 +28,9 @@ namespace Sigurnost_Models
         public int Age { get; set; }
 
         [Required]
+        public float Salary { get; set; }
+
+        [Required]
         public string CurrentAddress { get; set; }
 
         [Required]

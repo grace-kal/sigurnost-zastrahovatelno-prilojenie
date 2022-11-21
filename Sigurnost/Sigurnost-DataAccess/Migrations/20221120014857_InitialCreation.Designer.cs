@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Sigurnost_DataAccess;
 
 namespace Sigurnost_DataAccess.Migrations
 {
     [DbContext(typeof(SigurnostDbContext))]
-    partial class SigurnostDbContextModelSnapshot : ModelSnapshot
+    [Migration("20221120014857_InitialCreation")]
+    partial class InitialCreation
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -475,9 +477,6 @@ namespace Sigurnost_DataAccess.Migrations
                     b.Property<string>("PlaceOfBirth")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<float>("Salary")
-                        .HasColumnType("real");
 
                     b.Property<bool>("Sex")
                         .HasColumnType("bit");

@@ -10,8 +10,8 @@ using Sigurnost_DataAccess;
 namespace Sigurnost_DataAccess.Migrations
 {
     [DbContext(typeof(SigurnostDbContext))]
-    [Migration("20221119020219_InitialCreation")]
-    partial class InitialCreation
+    [Migration("20221121180355_AddingSalary")]
+    partial class AddingSalary
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -478,6 +478,9 @@ namespace Sigurnost_DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<float>("Salary")
+                        .HasColumnType("real");
+
                     b.Property<bool>("Sex")
                         .HasColumnType("bit");
 
@@ -595,13 +598,13 @@ namespace Sigurnost_DataAccess.Migrations
                     b.HasOne("Sigurnost_Models.User", "Agent")
                         .WithMany("SoldInsuranceContracts")
                         .HasForeignKey("AgentId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("Sigurnost_Models.User", "Client")
                         .WithMany("BoughtInsuranceContracts")
                         .HasForeignKey("ClientId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("Sigurnost_Models.InsuranceLevel", "InsuranceLevel")

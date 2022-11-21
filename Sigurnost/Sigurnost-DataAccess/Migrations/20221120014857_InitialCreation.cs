@@ -235,13 +235,13 @@ namespace Sigurnost_DataAccess.Migrations
                         column: x => x.AgentId,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_InsuranceContracts_AspNetUsers_ClientId",
                         column: x => x.ClientId,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_InsuranceContracts_InsuranceLevels_InsuranceLevelId",
                         column: x => x.InsuranceLevelId,
