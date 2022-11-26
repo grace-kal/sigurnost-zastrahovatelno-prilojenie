@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Sigurnost_WebApp</title>
+    <title> Сигурност </title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
@@ -11,24 +11,75 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">Sigurnost_WebApp</a>
+                <a class="navbar-brand" asp-area="" asp-page="/Index">Сигурност</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
+                    <ul class="navbar-nav flex- grow-1">
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
-                        </li>
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="Admin" asp-controller="" asp-action="">
+                                    <span style="color:#86ff65">Адм</span><span style="color:#5cfcee">ин</span><span style="color:#00efff"> П</span><span style="color:#00b1ff">ан</span><span style="color:#a099fc">ел</span>
+                                </a>
+                            </li>
+                        }
+                        else if (User.IsInRole("Agent"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="Agent" asp-controller="" asp-action="">
+                                    <span style="color:#86ff65">Аг</span><span style="color:#5cfcee">ент</span><span style="color:#00efff"> П</span><span style="color:#00b1ff">ан</span><span style="color:#a099fc">ел</span>
+                                </a>
+                            </li>
+                        }
                     </ul>
                     <partial name="_LoginPartial" />
                 </div>
             </div>
         </nav>
+
+        @if (User.Identity.IsAuthenticated && !User.IsInRole("Admin") && !User.IsInRole("Agent"))
+        {
+            <div class="sidebar">
+                <ul>
+                    <li>
+                        <a asp-controller="Post" asp-action="Feed">
+                            <span class="icon"><i class="far fa-newspaper"></i></span>
+                            <span class="title">Публикации </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-controller="User" asp-action="Profile">
+                            <span class="icon"><i class="fas fa-user-circle"></i></span>
+                            <span class="title">Моят профил </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-controller="Bmi" asp-action="HealthCheck">
+                            <span class="icon"><i class="fas fa-heartbeat"></i></span>
+                            <span class="title">Предлагани застраховки </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-controller="Day" asp-action="AllUserDays">
+                            <span class="icon"><i class="fas fa-book"></i></span>
+                            <span class="title">Diary </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-controller="Food" asp-action="AllFoodss">
+                            <span class="icon"><i class="fas fa-seedling"></i></span>
+                            <span class="title">Food Library</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        }
     </header>
     <div class="container">
         <main role="main" class="pb-3">
@@ -38,7 +89,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2022 - Sigurnost_WebApp - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            &copy; 2022 - Сигурност
         </div>
     </footer>
 
