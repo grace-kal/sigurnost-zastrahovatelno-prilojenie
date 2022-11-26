@@ -20,33 +20,33 @@ a {
 }
 
 .btn-primary {
-    color: #fff;
-    background-color: #1b6ec2;
-    border-color: #1861ac;
+    color: white;
+    background-color: #3e3e70;
+    border-color: #3e3e70;
 }
 
 .btn-success {
     color: #fff;
-    background-color: #89e85e;
-    border-color: #81fb4a;
+    background-color: #3e3e70;
+    border-color: #3e3e70;
 }
 
     .btn-success:hover {
-        background-color: #4bfd4d;
+        background-color: #3e3e79;
     }
 
 a {
-    color: black;
+    color: white;
 }
 
     a:hover {
-        color: rgba(57, 58, 59, 0.82);
+        color: lightgray;
     }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
     color: #fff;
-    background-color: #89e85e;
-    border-color: #81fb4a;
+    background-color: #3e3e70;
+    border-color: #3e3e70;
 }
 
 /* Sticky footer styles
@@ -88,6 +88,7 @@ html {
 body {
     /* Margin bottom by footer height */
     background-color:var(--darkblue);
+    color:white;
     margin-bottom: 60px;
     margin-left: 20px;
 }
@@ -869,7 +870,7 @@ figure {
 
 
 body {
-    color: #5f727f;
+    color: white;
 }
 
 .pricing-column {
