@@ -30,6 +30,7 @@ namespace Sigurnost_DataAccess.Migrations
                     FirstName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     LastName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Age = table.Column<int>(type: "int", nullable: true),
+                    Salary = table.Column<float>(type: "real", nullable: true),
                     CurrentAddress = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Citizenship = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     PlaceOfBirth = table.Column<string>(type: "nvarchar(max)", nullable: true),

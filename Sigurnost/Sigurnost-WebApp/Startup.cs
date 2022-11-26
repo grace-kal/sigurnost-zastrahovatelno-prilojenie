@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Sigurnost_DataAccess;
+using Sigurnost_DataAccess.Seeder;
 using Sigurnost_Models;
 using System;
 using System.Collections.Generic;
@@ -32,14 +33,24 @@ namespace Sigurnost_WebApp
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDatabaseDeveloperPageExceptionFilter();
-            services.AddDefaultIdentity<User>(options => options.SignIn.RequireConfirmedAccount = true)
+            services.AddDefaultIdentity<User>(options => options.SignIn.RequireConfirmedAccount = false)
+                .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<SigurnostDbContext>();
+            services.AddControllersWithViews();
             services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            using (var serviceScope = app.ApplicationServices.CreateScope())
+            {
+                var dbContext = serviceScope.ServiceProvider.GetRequiredService<SigurnostDbContext>();
+                dbContext.Database.Migrate();
+                new Seeder().SeedAsync(dbContext, serviceScope.ServiceProvider).GetAwaiter().GetResult();
+
+            }
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -62,7 +73,17 @@ namespace Sigurnost_WebApp
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
+
+                endpoints.MapAreaControllerRoute(
+                    name: "area", "Admin",
+                    pattern: "{area:exists }/{controller}/{action}/{id?}");
+                endpoints.MapAreaControllerRoute(
+                   name: "area", "Agent",
+                   pattern: "{area:exists }/{controller}/{action}/{id?}");
             });
         }
     }

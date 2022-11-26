@@ -10,8 +10,8 @@ using Sigurnost_DataAccess;
 namespace Sigurnost_DataAccess.Migrations
 {
     [DbContext(typeof(SigurnostDbContext))]
-    [Migration("20221121180355_AddingSalary")]
-    partial class AddingSalary
+    [Migration("20221123210443_InitialCreation")]
+    partial class InitialCreation
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

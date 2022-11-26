@@ -59,7 +59,7 @@ namespace Sigurnost_DataAccess.Seeder
                 var result = await userManager.CreateAsync(new User
                 {
                     UserName = "Agent0",
-                    Email = "kalinina.grace@gmail.com",
+                    Email = "agent@gmail.com",
                     EmailConfirmed = true,
                     FirstName = "Gratsiya",
                     LastName = "Kalinina"
