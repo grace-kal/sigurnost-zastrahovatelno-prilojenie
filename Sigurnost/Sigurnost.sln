@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sigurnost-DataAccess", "Sig
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sigurnost-Services", "Sigurnost-Services\Sigurnost-Services.csproj", "{775A07B3-D815-4BA3-946A-B7E5F5EFC1B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sigurnost-Api", "Sigurnost-Api\Sigurnost-Api.csproj", "{31589381-9CA2-430B-91C0-891E4C3CA726}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sigurnost-Api", "Sigurnost-Api\Sigurnost-Api.csproj", "{31589381-9CA2-430B-91C0-891E4C3CA726}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

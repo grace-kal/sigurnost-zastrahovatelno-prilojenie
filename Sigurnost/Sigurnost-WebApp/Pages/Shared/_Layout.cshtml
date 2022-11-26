@@ -6,8 +6,15 @@
     <title> Сигурност </title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <script src="https://kit.fontawesome.com/76a3ede41f.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div>
+        <div class="starsec"></div>
+        <div class="starthird"></div>
+        <div class="starfourth"></div>
+        <div class="starfifth"></div>
+    </div>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
@@ -19,12 +26,15 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex- grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Начало</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/PoliciesType">Предлагани застраховки</a>
                         </li>
                         @if (User.IsInRole("Admin"))
                         {
                             <li class="nav-item">
-                                <a class="nav-link" asp-area="Admin" asp-controller="" asp-action="">
+                                <a class="nav-link" asp-area="Admin" asp-controller="Home" asp-action="Index">
                                     <span style="color:#86ff65">Адм</span><span style="color:#5cfcee">ин</span><span style="color:#00efff"> П</span><span style="color:#00b1ff">ан</span><span style="color:#a099fc">ел</span>
                                 </a>
                             </li>
@@ -62,19 +72,7 @@
                     <li>
                         <a asp-controller="Bmi" asp-action="HealthCheck">
                             <span class="icon"><i class="fas fa-heartbeat"></i></span>
-                            <span class="title">Предлагани застраховки </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a asp-controller="Day" asp-action="AllUserDays">
-                            <span class="icon"><i class="fas fa-book"></i></span>
-                            <span class="title">Diary </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a asp-controller="Food" asp-action="AllFoodss">
-                            <span class="icon"><i class="fas fa-seedling"></i></span>
-                            <span class="title">Food Library</span>
+                            <span class="title">Моите застраховки </span>
                         </a>
                     </li>
                 </ul>
@@ -89,7 +87,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2022 - Сигурност
+            &copy; @DateTime.Now.Year - Сигурност
         </div>
     </footer>
 
