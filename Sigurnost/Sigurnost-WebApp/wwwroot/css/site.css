@@ -24,7 +24,10 @@ a {
     background-color: #3e3e70;
     border-color: #3e3e70;
 }
-
+    .btn-primary:hover {
+        background-color: #3e3e79;
+        border-color: #3e3e70;
+    }
 .btn-success {
     color: #fff;
     background-color: #3e3e70;
@@ -110,7 +113,7 @@ body {
     height: 80%;
     border-bottom-left-radius: 20px;
     transition: all 0.3s ease;
-    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, .07);
+    /*box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, .07);*/
 }
 
     .sidebar ul {
@@ -362,33 +365,45 @@ body {
     }
 }
 
-#SLIDE_BG .home-content {
+.home-content {
     margin-left: 150px;
     align-content: center;
+    color: white;
     width: 800px;
     height: 615px;
-    color: black;
-    background-color: rgba(255, 255, 254, 254);
+    background-color: #4C4E52;
     border: none;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    -ms-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
 }
 
-    #SLIDE_BG .home-content .left-band-home {
+  .home-content .left-band-home {
         padding-top: 70px;
-        background-color: rgba(255, 255, 255, 255);
-        color: black;
         border: none;
         width: 30%;
+        -webkit-transition: all 0.3s ease-in-out 0s;
+        -moz-transition: all 0.3s ease-in-out 0s;
+        -ms-transition: all 0.3s ease-in-out 0s;
+        -o-transition: all 0.3s ease-in-out 0s;
+        transition: all 0.3s ease-in-out 0s;
     }
 
-    #SLIDE_BG .home-content .right-band-home {
+    .home-content .right-band-home {
         padding-top: 70px;
-        color: black;
         border: none;
+        -webkit-transition: all 0.3s ease-in-out 0s;
+        -moz-transition: all 0.3s ease-in-out 0s;
+        -ms-transition: all 0.3s ease-in-out 0s;
+        -o-transition: all 0.3s ease-in-out 0s;
+        transition: all 0.3s ease-in-out 0s;
     }
 
-        #SLIDE_BG .home-content .right-band-home:hover {
+       .home-content .right-band-home:hover {
             border: none;
-            color: black;
+            color:white;
         }
 
 .admin {

@@ -49,12 +49,12 @@ namespace Sigurnost_Models
         [ForeignKey("InsuranceType"),
             Required]
         public int InsuranceTypeId { get; set; }
-        public InsuranceType InsuranceType { get; set; }
+        public virtual InsuranceType InsuranceType { get; set; }
 
         [ForeignKey("InsuranceContract"),
             Required]
         public int InsuranceContractId { get; set; }
-        public InsuranceContract InsuranceContract { get; set; }
+        public virtual InsuranceContract InsuranceContract { get; set; }
 
     }
 }

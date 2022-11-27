@@ -5,4 +5,13 @@
     <RootNamespace>Sigurnost_Services</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="5.0.17" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Sigurnost-DataAccess\Sigurnost-DataAccess.csproj" />
+    <ProjectReference Include="..\Sigurnost-Models\Sigurnost-Models.csproj" />
+  </ItemGroup>
+
 </Project>

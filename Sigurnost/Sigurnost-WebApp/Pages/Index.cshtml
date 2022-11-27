@@ -3,12 +3,7 @@
     ViewData["Title"] = "Начало";
 }
 <body>
-    <div>
-        <div class="starsec"></div>
-        <div class="starthird"></div>
-        <div class="starfourth"></div>
-        <div class="starfifth"></div>
-    </div>
+
     @if (User.Identity.IsAuthenticated)
     {
         <table class="table table-hover home-content">
@@ -16,15 +11,15 @@
                 <td class="left-band-home">
                     <h1>Добре дошли отново!</h1>
                     <p>Радваме, се че използвате нашето приложение.</p>
-                    <i class="fa-regular fa-hand-wave"></i>
+                    <i class="fa-sharp fa-solid fa-hand-wave"></i>
                 </td>
                 <td class="right-band-home">
                     <h1 style="color: #181828">Сигурност</h1>
                     <ul>
                         <li>Проверете най-новите застрахователни трендове в "Публикации"</li>
                         <li>Достъп до вашите застраховаки в "Моите застраховки"</li>
-                        <li>Проверете типовете предлагани застраховки от нас в "Типове застраховки"</li>
                         <li>Вашите данни в "Моят профил"</li>
+                        <li>Проверете типовете предлагани застраховки от нас като скролнете надолу по тази страница <a href="#mainCoantiner"><i class="fa-solid fa-arrow-down"></i></a></li>
                     </ul>
                 </td>
             </tr>
@@ -37,18 +32,194 @@
                 <td class="left-band-home">
                     <h1>Влезте или се регистрирайте</h1>
                     <p>Създадете акаунт или влезте за да изпозвате всички функции на <b style="color: #181828">Сигурност</b>.</p>
-                    <i class="fa-regular fa-hand-wave"></i>
+                    <i class="fa-sharp fa-solid fa-hand-wave"></i>
                 </td>
                 <td class="right-band-home">
                     <h1 style="color: #181828">Сигурност</h1>
                     <ul>
                         <li>Приложението ни ви предоставя възможност да се информирате за последните застрахователни трендове!</li>
-                        <li>Лесен достъп до вашите застраховаки!</li>
+                        <li>Лесен достъп до вашите застраховки!</li>
                         <li>Тук може да заявите нова застраховка за 5 минути!</li>
-                        <li>Пълна информираност относно всеки детайл от всички застраховки.</li>
+                        <li>Пълна информираност относно всеки детайл от всички застраховки <a href="#mainCoantiner"><i class="fa-solid fa-arrow-down"></i></a></li>
                     </ul>
                 </td>
             </tr>
         </table>
     }
+
+    <div id="mainCoantiner">
+        <!--dust particel-->
+        <div class="margin-body">
+
+            <div>
+                <div class="starsec"></div>
+                <div class="starthird"></div>
+                <div class="starfourth"></div>
+                <div class="starfifth"></div>
+            </div>
+            <!--Dust particle end--->
+
+            <div class="row">
+                <div class="col-sm-12 col-md-12">
+                    <div class="wpb_text_column wpb_content_element ">
+                        <div class="wpb_wrapper">
+                            <div class="title-h1 text-center"><span><span class="light">Видове </span> застраховки дом</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-3 col-md-3 pricing-column-wrapper">
+                    <div class="pricing-column">
+                        <div class="pricing-price-row">
+                            <div class="pricing-price-wrapper">
+                                <div class="pricing-price">
+                                    <div class="pricing-cost">Дом Класик</div>
+                                    <div class="time">Движимо и недвижимо имущество</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pricing-row-title">
+                            <div class="pricing_row_title">Застраховка дом предлага защита от</div>
+                        </div>
+                        <figure class="pricing-row">Земетресение</figure>
+                        <figure class="pricing-row"><span>Наводнение</span></figure>
+                        <figure class="pricing-row strike">Битов нцидент</figure>
+                        <figure class="pricing-row strike">Строителен инцидент</figure>
+                        <figure class="pricing-row strike">Пожар</figure>
+                        <div class="pricing-footer">
+                            <div class="gem-button-container gem-button-position-center"><a href="#" class="gem-button gem-green">Изберете сега</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-md-3 pricing-column-wrapper">
+                    <div class="pricing-column">
+                        <div class="pricing-price-row">
+                            <div class="pricing-price-wrapper">
+                                <div class="pricing-price">
+                                    <div class="pricing-cost">Дом Плюс</div>
+                                    <div class="time">Движимо и недвижимо имущество</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pricing-row-title">
+                            <div class="pricing_row_title">Застраховка дом предлага защита от</div>
+                        </div>
+                        <figure class="pricing-row">Земетресение</figure>
+                        <figure class="pricing-row"><span>Наводнение</span></figure>
+                        <figure class="pricing-row">Битов нцидент</figure>
+                        <figure class="pricing-row strike">Строителен инцидент</figure>
+                        <figure class="pricing-row strike">Пожар</figure>
+                        <div class="pricing-footer">
+                            <div class="gem-button-container gem-button-position-center"><a href="#" class="gem-button gem-green">Изберете сега</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-md-3 pricing-column-wrapper">
+                    <div class="pricing-column">
+                        <div class="pricing-price-row">
+                            <div class="pricing-price-wrapper">
+                                <div class="pricing-price">
+                                    <div class="pricing-cost">Дом Екстра</div>
+                                    <div class="time">Движимо и недвижимо имущество</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pricing-row-title">
+                            <div class="pricing_row_title">Застраховка дом предлага защита от</div>
+                        </div>
+                        <figure class="pricing-row">Земетресение</figure>
+                        <figure class="pricing-row"><span>Наводнение</span></figure>
+                        <figure class="pricing-row">Битов нцидент</figure>
+                        <figure class="pricing-row">Строителен инцидент</figure>
+                        <figure class="pricing-row">Пожар</figure>
+                        <div class="pricing-footer">
+                            <div class="gem-button-container gem-button-position-center"><a href="#" class="gem-button gem-green">Изберете сега</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12 col-md-12">
+                    <div class="wpb_text_column wpb_content_element ">
+                        <div class="wpb_wrapper">
+                            <div class="title-h1 text-center"><span><span class="light">Видове </span> застраховки МПС</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col-sm-3 col-md-3 pricing-column-wrapper">
+                    <div class="pricing-column">
+                        <div class="pricing-price-row">
+                            <div class="pricing-price-wrapper">
+                                <div class="pricing-price">
+                                    <div class="pricing-cost">МПС Комфорт</div>
+                                    <div class="time"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pricing-row-title">
+                            <div class="pricing_row_title">Застраховка МПС предлага защита от</div>
+                        </div>
+                        <figure class="pricing-row">Катастрофи</figure>
+                        <figure class="pricing-row"><span style="color: #5f727f;">Инциденти от страна на клиента</span></figure>
+                        <figure class="pricing-row strike"><span style="color: #5f727f;">Пожар</span></figure>
+                        <figure class="pricing-row strike">Повреда при ремонт</figure>
+                        <div class="pricing-footer">
+                            <div class="gem-button-container gem-button-position-center"><a class="gem-button gem-purpel">Изберете сега</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-md-3 pricing-column-wrapper">
+                    <div class="pricing-column">
+                        <div class="pricing-price-row">
+                            <div class="pricing-price-wrapper">
+                                <div class="pricing-price">
+                                    <div class="pricing-cost">МПС Плюс</div>
+                                    <div class="time"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pricing-row-title">
+                            <div class="pricing_row_title">Застраховка МПС предлага защита от</div>
+                        </div>
+                        <figure class="pricing-row">Катастрофи</figure>
+                        <figure class="pricing-row"><span style="color: #5f727f;">Инциденти от страна на клиента</span></figure>
+                        <figure class="pricing-row"><span style="color: #5f727f;">Пожар</span></figure>
+                        <figure class="pricing-row strike">Повреда при ремонт</figure>
+                        <div class="pricing-footer">
+                            <div class="gem-button-container gem-button-position-center"><a class="gem-button gem-purpel">Изберете сега</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-md-3 pricing-column-wrapper">
+                    <div class="pricing-column">
+                        <div class="pricing-price-row">
+                            <div class="pricing-price-wrapper">
+                                <div class="pricing-price">
+                                    <div class="pricing-cost">МПС Екстра</div>
+                                    <div class="time"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pricing-row-title">
+                            <div class="pricing_row_title">Застраховка МПС предлага защита от</div>
+                        </div>
+                        <figure class="pricing-row">Катастрофи</figure>
+                        <figure class="pricing-row"><span style="color: #5f727f;">Инциденти от страна на клиента</span></figure>
+                        <figure class="pricing-row"><span style="color: #5f727f;">Пожар</span></figure>
+                        <figure class="pricing-row">Повреда при ремонт</figure>
+                        <div class="pricing-footer">
+                            <div class="gem-button-container gem-button-position-center"><a class="gem-button gem-purpel">Изберете сега</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>

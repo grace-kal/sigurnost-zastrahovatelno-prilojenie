@@ -30,15 +30,15 @@ namespace Sigurnost_Models
 
         [ForeignKey("User"), Required]
         public string ClientId { get; set; }
-        public User Client { get; set; }
+        public virtual User Client { get; set; }
 
         [ForeignKey("User"), Required]
         public string AgentId { get; set; }
-        public User Agent { get; set; }
+        public virtual User Agent { get; set; }
 
         [ForeignKey("InsuranceLevel"), Required]
         public int InsuranceLevelId { get; set; }
-        public InsuranceLevel InsuranceLevel { get; set; }
+        public virtual InsuranceLevel InsuranceLevel { get; set; }
 
         public virtual IEnumerable<CarInsuranceInfo> CarInsuranceInfos { get; set; }
         public virtual IEnumerable<HomeInsuranceInfo> HomeInsuranceInfos { get; set; }

@@ -1,0 +1,13 @@
+﻿@model Sigurnost_WebApp.ViewModels.Articles.ListArticlesVM
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@foreach (var article in Model.Articles)
+{
+    if (article.IsDeleted == false)
+    {
+        <p>@article.Title</p>
+        <p>@article.Content</p>
+    }
+}

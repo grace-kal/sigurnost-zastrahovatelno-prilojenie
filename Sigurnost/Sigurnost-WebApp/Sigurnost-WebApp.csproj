@@ -7,9 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="5.0.17" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.17" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="5.0.17" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="5.0.17" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.17" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.17" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
@@ -17,6 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Sigurnost-DataAccess\Sigurnost-DataAccess.csproj" />
+    <ProjectReference Include="..\Sigurnost-Services\Sigurnost-Services.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -24,10 +27,8 @@
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Admin\Views\" />
-    <Folder Include="Areas\Agent\Controllers\" />
     <Folder Include="Areas\Agent\Data\" />
     <Folder Include="Areas\Agent\Models\" />
-    <Folder Include="Areas\Agent\Views\" />
     <Folder Include="Views\" />
     <Folder Include="wwwroot\img\" />
   </ItemGroup>
