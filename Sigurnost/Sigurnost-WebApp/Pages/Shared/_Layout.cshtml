@@ -58,7 +58,7 @@
             <div class="sidebar">
                 <ul>
                     <li>
-                        <a asp-controller="Post" asp-action="Feed">
+                        <a asp-controller="Article" asp-action="GetAllArticles">
                             <span class="icon"><i class="far fa-newspaper"></i></span>
                             <span class="title">Публикации </span>
                         </a>
@@ -71,6 +71,31 @@
                     </li>
                     <li>
                         <a asp-controller="Bmi" asp-action="HealthCheck">
+                            <span class="icon"><i class="fas fa-heartbeat"></i></span>
+                            <span class="title">Моите застраховки </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        }
+        else if (User.Identity.IsAuthenticated && User.IsInRole("Agent"))
+        {
+            <div class="sidebar">
+                <ul>
+                    <li>
+                        <a asp-area="Agent" asp-controller="Article" asp-action="GetAllArticles">
+                            <span class="icon"><i class="far fa-newspaper"></i></span>
+                            <span class="title">Публикации </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-area="Agent" asp-controller="Article" asp-action="GetMyArticles">
+                            <span class="icon"><i class="far fa-newspaper"></i></span>
+                            <span class="title">Моите публикации </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-controller="" asp-action="">
                             <span class="icon"><i class="fas fa-heartbeat"></i></span>
                             <span class="title">Моите застраховки </span>
                         </a>

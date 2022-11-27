@@ -1,3 +1,4 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -8,12 +9,18 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Sigurnost_DataAccess;
+using Sigurnost_DataAccess.Repositories;
+using Sigurnost_DataAccess.Repositories.Interfaces;
 using Sigurnost_DataAccess.Seeder;
 using Sigurnost_Models;
+using Sigurnost_Services;
+using Sigurnost_Services.Interfaces;
+using Sigurnost_WebApp.Mapper;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+
 
 namespace Sigurnost_WebApp
 {
@@ -30,14 +37,21 @@ namespace Sigurnost_WebApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<SigurnostDbContext>(options =>
-                options.UseSqlServer(
-                    Configuration.GetConnectionString("DefaultConnection")));
+                options
+                .UseLazyLoadingProxies()
+                .UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddAutoMapper(typeof(MapperProfile));
             services.AddDatabaseDeveloperPageExceptionFilter();
             services.AddDefaultIdentity<User>(options => options.SignIn.RequireConfirmedAccount = false)
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<SigurnostDbContext>();
             services.AddControllersWithViews();
             services.AddRazorPages();
+
+            services.AddScoped<IArticleService, ArticleService>();
+            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IArticleRepository, ArticleRepository>();
+            services.AddScoped<IUserRepository, UserRepository>(); 
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

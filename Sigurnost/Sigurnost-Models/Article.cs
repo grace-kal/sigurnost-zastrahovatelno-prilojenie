@@ -23,6 +23,6 @@ namespace Sigurnost_Models
 
         [ForeignKey("User"), Required]
         public Guid AuthorId { get; set; }
-        public User Author { get; set; }
+        public virtual User Author { get; set; }
     }
 }
