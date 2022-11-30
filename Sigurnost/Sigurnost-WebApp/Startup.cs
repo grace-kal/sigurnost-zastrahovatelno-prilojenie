@@ -1,9 +1,7 @@
-using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -15,11 +13,6 @@ using Sigurnost_DataAccess.Seeder;
 using Sigurnost_Models;
 using Sigurnost_Services;
 using Sigurnost_Services.Interfaces;
-using Sigurnost_WebApp.Mapper;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 
 namespace Sigurnost_WebApp
@@ -40,7 +33,7 @@ namespace Sigurnost_WebApp
                 options
                 .UseLazyLoadingProxies()
                 .UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-            services.AddAutoMapper(typeof(MapperProfile));
+            //services.AddAutoMapper(typeof(MapperProfile));
             services.AddDatabaseDeveloperPageExceptionFilter();
             services.AddDefaultIdentity<User>(options => options.SignIn.RequireConfirmedAccount = false)
                 .AddRoles<IdentityRole>()
