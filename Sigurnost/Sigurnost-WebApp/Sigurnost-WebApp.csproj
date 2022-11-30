@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="5.0.17" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.17" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="5.0.17" />
@@ -29,7 +28,6 @@
     <Folder Include="Areas\Admin\Views\" />
     <Folder Include="Areas\Agent\Data\" />
     <Folder Include="Areas\Agent\Models\" />
-    <Folder Include="Views\" />
     <Folder Include="wwwroot\img\" />
   </ItemGroup>
 
